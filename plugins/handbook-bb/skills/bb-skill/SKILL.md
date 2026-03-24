@@ -1,5 +1,10 @@
+---
 name: bb
-description: Expert guidance for using the Bitbucket CLI (bb) to manage Bitbucket pull requests, pipelines, repositories, and other Bitbucket operations from the command line. Use this skill when the user needs to interact with Bitbucket resources or perform Bitbucket workflows.
+description: Bitbucket CLI expertise for managing pull requests, pipelines, and repositories from the command line
+version: 0.1.0
+author: ganeshgaxy
+tags: [bitbucket, cli, pull-request, pipeline, ci-cd, code-review, devops]
+requires: [git, node]
 ---
 
 # Bitbucket CLI (bb) Skill
