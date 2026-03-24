@@ -1,10 +1,6 @@
 ---
 name: bb-skill
 description: Bitbucket CLI expertise for managing pull requests, pipelines, and repositories from the command line
-version: 0.1.0
-author: ganeshgaxy
-tags: [bitbucket, cli, pull-request, pipeline, ci-cd, code-review, devops]
-requires: [git, node]
 ---
 
 # Bitbucket CLI (bb) Skill
