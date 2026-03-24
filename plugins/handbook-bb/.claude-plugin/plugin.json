@@ -1,0 +1,9 @@
+{
+  "name": "handbook-bb",
+  "version": "0.1.0",
+  "description": "Bitbucket CLI (bb) expertise for managing pull requests, pipelines, and repositories from the command line",
+  "author": {
+    "name": "ganeshgaxy",
+    "email": "ganeshgaxy@github.com"
+  }
+}
