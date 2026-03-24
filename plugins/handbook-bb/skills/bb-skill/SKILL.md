@@ -1,5 +1,5 @@
 ---
-name: bb
+name: bb-skill
 description: Bitbucket CLI expertise for managing pull requests, pipelines, and repositories from the command line
 version: 0.1.0
 author: ganeshgaxy
@@ -14,6 +14,7 @@ Provides guidance for using `bb`, a lightweight Bitbucket CLI that mirrors glab'
 ## When to Use This Skill
 
 Invoke when the user needs to:
+
 - Create, review, or manage pull requests
 - Monitor or trigger CI/CD pipelines
 - Make authenticated Bitbucket API calls
@@ -22,11 +23,13 @@ Invoke when the user needs to:
 ## Prerequisites
 
 Verify bb installation before executing commands:
+
 ```bash
 bb --version
 ```
 
 If not installed, the user needs to build and link the CLI:
+
 ```bash
 cd /path/to/bb-cli && npm run link
 ```
@@ -57,6 +60,7 @@ export BITBUCKET_TOKEN=your-token
 ### Token Types
 
 bb supports three authentication methods:
+
 1. **App Password** — Create at Personal settings > App passwords. Uses Basic Auth (username + password).
 2. **Atlassian API Token** — Create at manage.atlassian.com > API tokens. Starts with `ATATT` prefix. Uses Basic Auth (email + token). bb auto-detects this prefix.
 3. **OAuth / Workspace Access Token** — Bearer token for workspace/repo/project scoped access.
@@ -138,6 +142,7 @@ bb ci stop 42
 ### Working Outside Repository Context
 
 When not in a Git repository with a Bitbucket remote, specify the repository:
+
 ```bash
 bb pr list -R workspace/repo
 bb ci list -R workspace/repo
@@ -146,6 +151,7 @@ bb ci list -R workspace/repo
 ### Automation and Scripting
 
 Use JSON output for parsing:
+
 ```bash
 bb pr list -R workspace/repo -F json | jq '.values[] | .title'
 bb ci list -R workspace/repo -F json
@@ -178,6 +184,7 @@ echo '{"title":"Bug"}' | bb api --method POST /repositories/workspace/repo/issue
 ### Merge Strategies
 
 Bitbucket supports three merge strategies:
+
 ```bash
 bb pr merge 123 --strategy merge_commit   # Default merge commit
 bb pr merge 123 --strategy squash         # Squash all commits
@@ -195,6 +202,7 @@ bb pr merge 123 --strategy fast_forward   # Fast-forward (no merge commit)
 ## Common Commands Quick Reference
 
 **Pull Requests:**
+
 - `bb pr list` - List open PRs
 - `bb pr create` - Create new PR
 - `bb pr view <id>` - View PR details
@@ -204,6 +212,7 @@ bb pr merge 123 --strategy fast_forward   # Fast-forward (no merge commit)
 - `bb pr comment <id> -m "msg"` - Add comment
 
 **Pipelines:**
+
 - `bb ci list` - List pipelines
 - `bb ci view <build#>` - View pipeline steps
 - `bb ci run` - Trigger pipeline
@@ -211,6 +220,7 @@ bb pr merge 123 --strategy fast_forward   # Fast-forward (no merge commit)
 - `bb ci stop <build#>` - Stop pipeline
 
 **API:**
+
 - `bb api <path>` - GET request
 - `bb api --method POST <path> --field key=value` - POST with data
 - `bb api --paginate <path>` - Auto-paginate
@@ -218,11 +228,13 @@ bb pr merge 123 --strategy fast_forward   # Fast-forward (no merge commit)
 ## Progressive Disclosure
 
 For detailed command documentation, refer to:
+
 - **references/commands-detailed.md** - Comprehensive command reference with all flags and options
 - **references/quick-reference.md** - Condensed command cheat sheet
 - **references/troubleshooting.md** - Detailed error scenarios and solutions
 
 Load these references when:
+
 - User needs specific flag or option details
 - Troubleshooting authentication or connection issues
 - Working with advanced features (API, pipelines, merge strategies, etc.)
