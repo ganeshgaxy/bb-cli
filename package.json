@@ -1,5 +1,5 @@
 {
-  "name": "bb-cli",
+  "name": "@ganeshgaxy/bb-cli",
   "version": "0.1.0",
   "description": "A lightweight Bitbucket CLI that mirrors glab's UX",
   "type": "module",

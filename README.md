@@ -5,7 +5,7 @@ A lightweight Bitbucket CLI that mirrors [glab](https://gitlab.com/gitlab-org/cl
 ## Install
 
 ```bash
-npm install -g bb-cli
+npm install -g @ganeshgaxy/bb-cli
 ```
 
 Requires Node.js >= 18.
